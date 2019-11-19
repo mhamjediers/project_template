@@ -22,8 +22,8 @@ Version {{cookiecutter.version}}
 │   ├── raw            <- The original, immutable data dump. (RO)
 │   └── temp           <- Intermediate data that has been transformed. (PG)
 ├── docs               <- Documentation notebook for users (HW)
-│   ├── reports        <- Other project reports and notebooks (e.g. Jupyter notebook, Rmarkdown) (HW)
-│   └── manuscript     <- Manuscript source, e.g., LaTeX, Markdown, etc. (HW)
+│   ├── manuscript     <- Manuscript source, e.g., LaTeX, Markdown, etc. (HW)
+│   └── reports        <- Other project reports and notebooks (e.g. Jupyter notebook, Rmarkdown) (HW)
 ├── results
 │   ├── figures        <- Figures for the manuscript or reports (PG)
 │   └── output         <- Other output for the manuscript or reports (PG)
