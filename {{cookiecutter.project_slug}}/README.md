@@ -1,6 +1,6 @@
 # {{cookiecutter.project_name}}
 
-Version {{cookiecutter.project_version}}
+Version {{cookiecutter.version}}
 
 {{cookiecutter.project_short_description}}
 
