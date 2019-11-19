@@ -7,23 +7,22 @@ Project Organization
 --------------------
 
     .
-    ├── AUTHORS.md
-    ├── LICENSE
+    ├── .gitignore
+    ├── CITATION.md
+    ├── LICENSE.md
     ├── README.md
     ├── bin
+    │   └── external
     ├── config
     ├── data
-    │   ├── external
-    │   ├── interim
     │   ├── processed
-    │   └── raw
+    │   ├── raw
+    │   └── temp
     ├── docs
-    ├── notebooks
-    ├── reports
-    │   └── figures
+    │   ├── reports
+    │   └── manuscript
+    ├── results
+    │   ├── figures
+    │   └── output
     └── src
-        ├── data
-        ├── external
-        ├── models
-        ├── tools
-        └── visualization
+        └── external
