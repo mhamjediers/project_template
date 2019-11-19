@@ -30,6 +30,7 @@ The project structure distinguishes three kinds of folders:
 ├── CITATION.md
 ├── LICENSE.md
 ├── README.md
+├── requirements.txt
 ├── bin                <- Compiled and external code, ignored by git (PG)
 │   └── external       <- Any external source code, e.g., pull from other git projects, or external libraries; ignored by git (RO)
 ├── config             <- Configuration files (HW)
