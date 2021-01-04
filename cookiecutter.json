@@ -1,10 +1,13 @@
 {
-    "full_name": "Your Name",
-    "email": "your@email.com",
-    "github_username": "github",
+    "full_name": "Maximilian Sprengholz",
+    "email": "maximilian.sprengholz@hu-berlin.de",
+    "git_url": "https://scm.cms.hu-berlin.de",
+    "git_username": "sprenmax",
     "project_name": "Name of your science project",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "project_short_description": "A short description of your project",
-    "release_date": "{% now 'local' %}",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "_copy_without_render": [
+        "*.py"
+    ]
 }
