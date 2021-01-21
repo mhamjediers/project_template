@@ -9,7 +9,14 @@
 
 
 %Footer on title page (with or without journal title)
-\journal{Journal}
+\makeatletter
+\def\ps@pprintTitle{%
+	\let\@oddhead\@empty
+	\let\@evenhead\@empty
+	\def\@oddfoot{\footnotesize\itshape\hfill\today}% Only date
+	\let\@evenfoot\@oddfoot}
+\makeatother
+%\journal{Name of Journal }
 
 %%%%%%%%%%%%%%%%%%%%%%%
 %% Elsevier bibliography styles
