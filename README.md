@@ -59,10 +59,6 @@ The project structure distinguishes three kinds of folders:
 
 The project is adapted to my basic social science workflow that uses [Anaconda](https://www.anaconda.com/products/individual) and the `environment.yml` to create a local environment and [Makefile](https://www.gnu.org/software/make/) to automate stuff.
 
-## Changelog
-
-See notes on differences compared to the original template in the [changelog](/CHANGELOG.md).
-
 ## License
 
 This project is licensed under the terms of the [MIT License](/LICENSE.md).
