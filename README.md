@@ -1,4 +1,4 @@
-# Good Enough Project
+# Project template
 
 _Version 0.1.1_
 
