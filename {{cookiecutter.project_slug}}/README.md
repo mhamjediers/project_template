@@ -14,19 +14,16 @@ _Version {{cookiecutter.version}}_
 ├── LICENSE.md
 ├── Makefile
 ├── README.md
-├── data               <- All project data, ignored by git
-│   ├── processed      <- Final data sets for modeling. (PG)
-│   ├── raw            <- The original, immutable data dump (RO)
-│   └── temp           <- Intermediate, transformed data (PG)
-├── docs               <- Documentation
-│   ├── manuscript     <- Manuscript source (HW)
-│   └── reports        <- Other project reports and notebooks (HW)
-├── results
-│   ├── figures        <- Figures for the manuscript or reports (PG)
-│   ├── misc           <- Other output (PG)
-│   └── tables         <- Tables (PG)
-└── src                <- Source code (HW)
-    └── external       <- External source code used (RO)
+├── analysis           <- All project analysis steps
+│   ├── out		       <- Final data sets for modeling. (PG)
+│   ├── data           <- The original, immutable data dump (RO)
+│   ├── temp           <- Intermediate, transformed data (PG)
+│   ├── results        <- Figures, Tables and other output for manuscript (PG)
+│	└── jobs		   <- Analysis scitps (HW)
+├── latex              <- Manuscript source (HW)
+├── literature		   <- Some literature specific to this project
+├── presentation	   <- Source for presentations (HW)
+└── submission		   <- Finalized submissions (HW)
 
 ```
 *RO* = read-only, *HW* = human-writeable, *PG* = project-generated. Repository organization implemented with [cookiecutter](https://github.com/cookiecutter/cookiecutter) using an adapted version of the [good-enough-project template](https://github.com/bvreede/good-enough-project) by Barbara Vreede. The fork is available [here](https://github.com/maximilian-sprengholz/good-enough-project).

@@ -1,0 +1,105 @@
+\documentclass[review]{elsarticle}
+%\documentclass[1p]{elsarticle}
+
+\usepackage[colorlinks=true]{hyperref}
+
+%For Line Numbers
+%\usepackage{lineno}
+%\modulolinenumbers[5]
+
+
+%Footer on title page (with or without journal title)
+\makeatletter
+\def\ps@pprintTitle{%
+	\let\@oddhead\@empty
+	\let\@evenhead\@empty
+	\def\@oddfoot{\footnotesize\itshape\hfill\today}% Only date
+	%\def\@oddfoot{{\footnotesize\itshape Preprint for Journal of Vocational Behavior \hfill\today}{\relax}}% With jornal
+	\let\@evenfoot\@oddfoot}
+\makeatother
+%\journal{Journal of Vocational Behavior}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{model2-nocasechange}\biboptions{authoryear}
+
+
+%%%%% Additional Packages from CTAN
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{dcolumn}
+\usepackage{amsmath}
+\usepackage{afterpage}
+\usepackage{pdflscape}
+
+
+%User-specific layout-commads
+\newcolumntype{d}[1]{D{.}{.}{#1}} 
+\newcommand\mc[1]{\multicolumn{1}{c}{#1}}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\newcolumntype{R}[1]{>{\flushright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{}
+
+\author{Maik Hamjediers\corref{mycorrespondingauthor}}
+\address{Humboldt-Universität zu Berlin, Department of Social Sciences}
+
+\cortext[mycorrespondingauthor]{Corresponding author}
+\ead{maik.hamjediers@hu-berlin.de}
+
+
+\begin{abstract}
+\input{0_abstract.tex}
+\end{abstract}
+
+\begin{keyword}
+
+%\MSC[2010] 00-01\sep  99-00
+\end{keyword}
+
+\end{frontmatter}
+
+\clearpage
+\setcounter{page}{1}
+%\linenumbers
+
+\input{1_intro.tex}
+\input{2_theory.tex}
+\input{3_data.tex}
+\input{4_results.tex}
+\input{text/5_conclusion.tex}
+
+\clearpage
+
+\begin{singlespace}
+\bibliography{bib}	
+\end{singlespace}
+
+
+\begin{appendix}
+	
+	
+	\clearpage
+	\setcounter{page}{1}
+	\setcounter{secnumdepth}{-1}
+	\setcounter{table}{0}
+	\renewcommand{\thetable}{S.\arabic{table}}
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{S.\arabic{figure}}
+	\input{text/B_supplementary.tex}
+	
+\end{appendix}
+
+\end{document}

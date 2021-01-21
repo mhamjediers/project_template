@@ -1,5 +1,5 @@
 # exclude data from source control by default
-/env
-/data/temp
-/data/processed
-/data/raw
+/analysis/temp
+/analysis/out
+/analysis/data
+/literature

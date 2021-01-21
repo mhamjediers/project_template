@@ -1,0 +1,149 @@
+% !TeX spellcheck = de_DE
+\documentclass[usenames,dvipsnames,hyperref={pdfpagelabels=false, colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue,}]{beamer}
+%\documentclass[aspectratio=169]
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+%\usepackage{bookman} Andere Schriftart
+
+%\usepackage[table]{xcolor} 
+\usepackage{picture}
+\usepackage{colortbl}
+\usepackage{setspace}
+\usepackage{booktabs}
+%\usepackage{tabularx}
+\usepackage{array}
+\newcolumntype{x}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\usepackage{graphicx}
+\usepackage{graphbox}
+
+\usepackage{dcolumn}
+\newcolumntype{d}[1]{D{.}{.}{#1}} 
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage[makeroom]{cancel}
+\usepackage{amssymb}
+\usepackage{eurosym}
+%\usepackage{caption}
+\usepackage{multirow}
+%\usepackage{subcaption}
+%\captionsetup[subfigure]{labelfont=bf,textfont=normalfont,singlelinecheck=off,justification=raggedright}
+
+%\newcommand{\hlc}[2][yellow]{ {\sethlcolor{#1} \hl{#2}} }
+\newcommand{\highlight}[3][black]{{\fboxsep0.5pt\colorbox{#2}{\color{#1} #3}}}
+
+\usepackage{tikz, pgfplots}
+\usepackage{pgfplotstable}
+\usetikzlibrary{tikzmark,arrows.meta}
+
+\usepackage[round]{natbib}
+\bibpunct[: ]{(}{)}{;}{a}{}{,}
+
+\usetheme{Singapore}
+\usecolortheme{default}
+
+\inputencoding{utf8}
+
+\usepackage{verbatimbox}
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+%\newcommand*\ifline[3]{\ifthenelse{\value{VerbboxLineNo} = #1}{#2}{#3}}
+%\newcommand*\codehighlight{\color{darkred}}
+%\newcommand\codenohighlight{\arabic{VerbboxLineNo}:\hspace{1ex}}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[]
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
+  
+%different font type for mathmode
+\usefonttheme[onlymath]{serif}
+
+\definecolor{blue}{HTML}{00376c}
+\definecolor{darkred}{HTML}{a30000}
+\definecolor{hlwhite}{HTML}{ffffff}
+\definecolor{statablue}{HTML}{1a476f}
+\definecolor{statamaroon}{HTML}{90353b}
+\definecolor{statagreen}{HTML}{55752f}
+\definecolor{stataorange}{HTML}{e37e00}
+\setbeamercolor{itemize item}{fg=blue}
+\setbeamercolor{itemize subitem}{fg=blue}
+\setbeamercolor{alerted text}{fg=darkred}
+\setbeamercolor{enumerate item}{fg=blue}
+\setbeamercolor{caption name}{fg=black}
+\setbeamercolor{title}{fg=blue}
+\setbeamercolor{frametitle}{fg=blue}
+\setbeamercolor{structure}{fg=blue}
+
+\definecolor{linkcolor}{HTML}{0000EE}
+\newcommand{\link}[3][linkcolor]{\hyperlink{#2}{\color{#1}{#3}}}
+
+\setbeamerfont{frametitle}{shape=\scshape}
+
+\setbeamersize{text margin left=5mm,text margin right=5mm} 
+
+\setbeamertemplate{headline}{
+	\begin{beamercolorbox}[wd=\paperwidth, left]{section in head/foot}
+	\vskip2pt	\insertnavigation{\paperwidth}  		
+	\end{beamercolorbox} 
+%	\hfill
+%	\begin{beamercolorbox}[wd=0.09\paperwidth, right]{section in head/foot}
+%			\vskip2pt	\includegraphics[scale=.06]{husiegel.png} \hskip2pt	
+%	\end{beamercolorbox}   
+}
+
+\setbeamertemplate{footline}{\hbox{
+	\begin{beamercolorbox}[wd=0.3\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}
+		\insertshortauthor  
+    \end{beamercolorbox}
+ 	\begin{beamercolorbox}[wd=0.4\paperwidth, center]{section in head/foot}
+		\insertshorttitle
+	 \end{beamercolorbox} 
+	\begin{beamercolorbox}[wd=0.3\paperwidth, center]{section in head/foot}
+		\insertpagenumber /\insertpresentationendpage
+	\end{beamercolorbox} 
+}}
+
+
+
+\author[M. Hamjediers]{Maik Hamjediers}
+\institute[]{Humboldt-Universität zu Berlin}
+
+%\title[%Short Title%]{%Long Title%}
+%\subtitle{ }
+%\date[\today]{\today}
+
+
+\begin{document}
+	
+	\makeatletter
+	\DeclareRobustCommand\citep
+	{\begingroup\tiny\NAT@swatrue\let\NAT@ctype\z@\NAT@partrue
+		\@ifstar{\NAT@fulltrue\NAT@citetp}{\NAT@fullfalse\NAT@citetp}}
+	\let\old@beamer@writeslidentry\beamer@writeslidentry
+	\def\beamer@writeslidentry{%
+		\expandafter\beamer@ifempty\expandafter{\beamer@framestartpage}{}% does not happen normally
+		{%else
+			\clearpage\beamer@notesactions%
+		}
+	}
+	\makeatother
+	\begin{frame}[plain, t]
+%		\hfill \includegraphics[scale=.1]{husiegel.png}
+%		\vspace{-15pt} 
+		\titlepage
+	\end{frame}
+	
+	\makeatletter
+	\let\beamer@writeslidentry\old@beamer@writeslidentry
+	\makeatother
+
+
+
+
+
+
+\end{document}
