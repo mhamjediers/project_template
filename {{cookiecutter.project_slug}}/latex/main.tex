@@ -51,7 +51,7 @@
 
 \begin{frontmatter}
 
-\title{}
+\title{Main Title}
 
 \author{Maik Hamjediers\corref{mycorrespondingauthor}}
 \address{Humboldt-Universität zu Berlin, Department of Social Sciences}
@@ -79,7 +79,7 @@
 \input{2_theory.tex}
 \input{3_data.tex}
 \input{4_results.tex}
-\input{text/5_conclusion.tex}
+\input{5_conclusion.tex}
 
 \clearpage
 
@@ -89,7 +89,17 @@
 
 
 \begin{appendix}
+
+
 	
+	\clearpage
+	\setcounter{page}{1}
+	\setcounter{secnumdepth}{-1}
+	\setcounter{table}{0}
+	\renewcommand{\thetable}{A.\arabic{table}}
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{A.\arabic{figure}}
+	\input{A_appendix.tex}
 	
 	\clearpage
 	\setcounter{page}{1}
@@ -98,7 +108,7 @@
 	\renewcommand{\thetable}{S.\arabic{table}}
 	\setcounter{figure}{0}
 	\renewcommand{\thefigure}{S.\arabic{figure}}
-	\input{text/B_supplementary.tex}
+	\input{B_supplementary.tex}
 	
 \end{appendix}
 
