@@ -24,7 +24,7 @@ pip install cookiecutter
 
 To start a new science project:
 
-`cookiecutter gh:maximilian-sprengholz/good-enough-project`
+`cookiecutter gh:mhamjediers/project_template`
 
 ## Project Structure
 
